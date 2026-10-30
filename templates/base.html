@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto Appblue</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Aplicacion Appblue</h1>
+
+        <nav>
+            <a href="{{ url_for('admin.panel') }}">
+                Panel de administracion
+            </a>
+
+            |
+
+            <a href="{{ url_for('blog.entrada', id=1) }}">
+                Blog
+            </a>
+        </nav>
+
+        <hr>
+    </header>
+
+    <main>
+        {% block contenido %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>Proyecto desarrollado con Flask y Python.</p>
+    </footer>
+
+</body>
+
+</html>
